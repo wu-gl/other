@@ -229,6 +229,23 @@ public class RSAUtils {
         return decryptedData;
     }
 
+    public static String encryptByPublicKeyAndEncode(String data, String publicKey) throws Exception {
+        return Base64Utils.encode(encryptByPublicKey(data, publicKey));
+    }
+
+    /**
+     * <p>
+     * 私钥加密
+     * </p>
+     *
+     * @param data       源数据（String）
+     * @param privateKey 私钥(BASE64编码)
+     * @return
+     * @throws Exception
+     */
+    public static byte[] encryptByPublicKey(String data, String publicKey) throws Exception {
+        return encryptByPublicKey(data.getBytes("UTF-8"), publicKey);
+    }
     /** */
     /**
      * <p>

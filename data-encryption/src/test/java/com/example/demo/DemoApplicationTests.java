@@ -39,6 +39,10 @@ class DemoApplicationTests {
             String encryptStr = RSAUtils.encryptByPrivateKeyAndEncode("wgl", privateKey);
             String decryptStrs = RSAUtils.decodeAndDecryptByPublicKey2Str(encryptStr, publicKey);
             System.out.println(decryptStrs);
+
+//            String encryptStr1 = RSAUtils.encryptByPublicKeyAndEncode("wgl", publicKey);
+//            String decryptStrs = RSAUtils.decodeAndDecryptByPublicKey2Str(encryptStr1, privateKey);
+
         } catch (Exception ex) {
             System.out.println(ex.toString());
         }
